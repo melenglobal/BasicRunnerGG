@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     float rotateScale = 1;
     float movementSide = 0;
     int collectedGold = 0;
-    float objectHeight = .01f;
-    float maxObjectHeight = .03f;
+    float objectHeight = .1f;
+    /*float maxObjectHeight = .3f;*/
     public bool gameOver = false;
 
     public TMP_Text _score;
@@ -69,11 +69,7 @@ public class PlayerMovement : MonoBehaviour
     public void CollectableAdd()
     {
         objectHeight++;
-        if (objectHeight<=maxObjectHeight)
-        {
-            transform.localScale = new Vector3(1, objectHeight, 1);
-        }
-        
+        transform.localScale = new Vector3(1, objectHeight, 1);
     }
 
     
